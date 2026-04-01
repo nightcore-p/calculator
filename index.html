@@ -109,21 +109,25 @@
             margin-bottom: 25px;
         }
         th, td {
-            border: 1px solid #000;
+            /* Changed border color to the requested blue */
+            border: 1px solid #59bcef;
             padding: 12px;
             text-align: left;
         }
         th {
-            background-color: #59bcef;
             color: #000;
             width: 30%;
         }
 
         /* Print Styles */
         @media print {
+            /* This rule hides the browser's default date, URL, and page numbers */
+            @page {
+                margin: 0; 
+            }
             body {
                 background-color: #fff;
-                margin: 0;
+                margin: 1.5cm; /* Adds safe margin for the actual printed page */
                 padding: 0;
             }
             .no-print {
